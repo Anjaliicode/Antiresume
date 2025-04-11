@@ -1,14 +1,12 @@
-import './App.css'
+import './App.css';  
+import CandidateDashboard from "../src/candidate_pages/Candidate_Dashboard";  
 
-function App() {
+function App() {  
+  return (  
+    <>  
+      <CandidateDashboard />  
+    </>  
+  );  
+}  
 
-
-  return (
-    <>
-      <h2>Hellooo ..</h2>
-    
-    </>
-  )
-}
-
-export default App
+export default App;  
