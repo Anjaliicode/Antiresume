@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 // import './Candidate_dashboard.css';
 import "../styles/Candidate_Dashboard.css"
 // Import icons from react-icons
-import { FaReact, FaCode, FaLaptopCode, FaRegClock } from 'react-icons/fa';
+import { FaReact, FaCode, FaLaptopCode, FaRegClock, FaHome } from 'react-icons/fa';
 import { BiTestTube } from 'react-icons/bi';
 import { BsBuilding } from 'react-icons/bs';
 import { MdDataUsage, MdDesignServices, MdOutlineRecommend } from 'react-icons/md';
@@ -136,6 +137,25 @@ const Candidate_Dashboard = () => {
 
   return (
     <div className="coding-challenge-container">
+      {/* Home button to navigate back to homepage */}
+      <div className="home-button-container" style={{ padding: '15px', textAlign: 'left' }}>
+        <Link to="/" className="home-button" style={{
+          padding: '8px 16px',
+          backgroundColor: '#4361ee',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '4px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          fontWeight: 'bold',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+          transition: 'all 0.3s ease'
+        }}>
+          <FaHome /> Back to Home
+        </Link>
+      </div>
+
       {!selectedChallenge ? (
         <>
           <div className="challenge-header">
